@@ -20,7 +20,7 @@ xhr.onload = function () {
     var str = '';
     for (var i = 0; i < data.length; i++) {
         let temp = `            <div class="card">
-        <img class="card-img" src=${data[i].PicURL} alt="">
+        <img class="card-img" src=${data[i].PicURL} alt="food-picture">
         <div class="card-gradient"></div>
         <div class="card-head">${data[i].City}</div>
         <div class="card-subtitle">${data[i].Town}</div>
@@ -60,7 +60,7 @@ xhr.onload = function () {
         for (var value of data) {
             if (select === value.City) {
                 var temp = `            <div class="card">
-        <img class="card-img" src=${value.PicURL} alt="">
+        <img class="card-img" src=${value.PicURL} alt="food-picture">
         <div class="card-gradient"></div>
         <div class="card-head">${value.City}</div>
         <div class="card-subtitle">${value.Town}</div>
@@ -105,7 +105,7 @@ xhr.onload = function () {
         for (var value of data) {
             if (select === value.Town) {
                 var temp = `            <div class="card">
-                <img class="card-img" src=${value.PicURL} alt="">
+                <img class="card-img" src=${value.PicURL} alt="food-picture">
                 <div class="card-gradient"></div>
                 <div class="card-head">${value.City}</div>
                 <div class="card-subtitle">${value.Town}</div>
@@ -147,11 +147,6 @@ xhr.onload = function () {
             })
         }
     }
-    city.addEventListener("change", updateCity, false); //監聽行政區
-    city.addEventListener("change", updateTown, false); //渲染鄉鎮區
-    town.addEventListener("change", renderCard, false); //渲染該鄉鎮區的卡片
-
-
     //hover事件
     function mouseEvent() {
         var card = document.querySelectorAll(".card");
@@ -182,4 +177,11 @@ xhr.onload = function () {
     }
 
     //hover事件
+
+
+    city.addEventListener("change", updateCity, false); //監聽行政區
+    city.addEventListener("change", updateTown, false); //渲染鄉鎮區
+    town.addEventListener("change", renderCard, false); //渲染該鄉鎮區的卡片
+
+
 }
