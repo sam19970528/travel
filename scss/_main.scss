@@ -1,0 +1,141 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  background: #eeeeee;
+  position: relative;
+  @include mobile{
+    background: #fff;
+  }
+}
+h1 {
+  color: #5e6666;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding: 35px 0;
+}
+.loading{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,.3);
+  z-index: 100;
+}
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  @include pad{
+    width: 748px;
+  }
+  @include mobile{
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+.header {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  @include mobile{
+    display: block;
+  }
+  select {
+    background: #eeeeee;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 3px;
+    border: 0;
+    padding: 10px 10px;
+    margin-right: 30px;
+    @include mobile{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+.content {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 365px;
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-right: 25px;
+  .card-gradient{
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+  }
+  @include pad{
+    margin-right: 9px;
+  }
+  @include mobile{
+    width: 100%;
+    margin-right: 0;
+  }
+  .card-img {
+    width: 100%;
+    height: 240px;
+    transition: 0.3s;
+  }
+  .card-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    background: #e29607;
+    color: #fff;
+    font-size: 14px;
+  }
+  .card-subtitle {
+    position: absolute;
+    bottom: 35px;
+    left: 10px;
+    font-size: 14px;
+    color: #eeeeee;
+    font-style: italic;
+    transition: 0.3s;
+  }
+  .card-title {
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+    color: #fff;
+    transition: 0.3s;
+  }
+  .card-hr {
+    position: absolute;
+    left: 10px;
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    bottom: 50px;
+    border-radius: 3px;
+    opacity: 0;
+  }
+  .card-text {
+    position: absolute;
+    bottom: 10px;
+    opacity: 0;
+    color: #fff;
+    padding: 0 10px;
+    height: 30px;
+    overflow: hidden;
+  }
+}
