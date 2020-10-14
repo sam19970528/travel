@@ -121,31 +121,7 @@ xhr.onload = function () {
             }
         }
         list.innerHTML = str;
-        var card = document.querySelectorAll(".card");
-        var cardImg = document.querySelectorAll(".card-img");
-        var cardSubtitle = document.querySelectorAll(".card-subtitle");
-        var cardTitle = document.querySelectorAll(".card-title");
-        var cardText = document.querySelectorAll(".card-text");
-        var cardHr = document.querySelectorAll(".card-hr");
-        for (let i = 0; i < card.length; i++) {
-            card[i].addEventListener("mouseenter", function (e) {
-                cardImg[i].style.transform = "scale(1.05)";
-                cardSubtitle[i].style.bottom = "85px";
-                cardTitle[i].style.bottom = "65px";
-                cardText[i].style.opacity = "1";
-                cardText[i].style.transition = ".3s";
-                cardHr[i].style.opacity = "1";
-                cardHr[i].style.transition = ".3s";
-            })
-
-            card[i].addEventListener("mouseleave", function (e) {
-                cardImg[i].style.transform = "scale(1)";
-                cardSubtitle[i].style.bottom = "35px";
-                cardTitle[i].style.bottom = "15px";
-                cardText[i].style.opacity = "0";
-                cardHr[i].style.opacity = "0";
-            })
-        }
+        mouseEvent();
     }
     //hover事件
     function mouseEvent() {
